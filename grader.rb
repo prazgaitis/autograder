@@ -15,8 +15,9 @@ class Grader < Thor
       File.open("./#{dir_name}/#{file}", "w") {}
     end
 
-    say "1. paste the rubric into hw-#{num}/rubric.txt, and usernames into usernames.txt", :green
-    say "2. Next run `ruby grader.rb clone`\n", :green
+    say "1. paste the rubric into hw-#{num}/rubric.txt", :green
+    say "2. and usernames into usernames.txt", :pink
+    say "3. Next run `ruby grader.rb clone`\n", :yellow
   end
 
   desc "grade", "Start grading an assignment"
